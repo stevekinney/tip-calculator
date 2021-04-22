@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { Theme } from '@twilio-paste/core/theme';
+
 import Application from './Application';
 
-import { Theme } from '@twilio-paste/core/theme';
+import './index.css';
 
 ReactDOM.render(
   <Theme.Provider theme='default'>
