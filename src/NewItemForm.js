@@ -25,20 +25,20 @@ export const NewItemForm = ({ onSubmit }) => {
   return (
     <Box marginBottom="space80">
       <form onSubmit={handleSubmit}>
-        <Box marginBottom='space80'>
-          <Label htmlFor='item-name'>Item Name</Label>
+        <Box marginBottom="space80">
+          <Label htmlFor="item-name">Item Name</Label>
           <Input
-            id='item-name'
-            type='text'
+            id="item-name"
+            type="text"
             value={name}
             onChange={(event) => setName(event.target.value)}
           />
         </Box>
-        <Box marginBottom='space80'>
-          <Label htmlFor='item-price'>Price</Label>
+        <Box marginBottom="space80">
+          <Label htmlFor="item-price">Price</Label>
           <Input
-            id='item-price'
-            type='number'
+            id="item-price"
+            type="number"
             insertBefore={<div>$</div>}
             value={price}
             onChange={(event) => setPrice(event.target.value)}
@@ -47,9 +47,9 @@ export const NewItemForm = ({ onSubmit }) => {
         <Button
           disabled={!isValid()}
           onClick={handleSubmit}
-          type='submit'
+          type="submit"
           fullWidth
-          variant='primary'
+          variant="primary"
         >
           🍳 Add Item
         </Button>

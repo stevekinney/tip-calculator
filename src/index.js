@@ -7,7 +7,7 @@ import Application from './Application';
 import './index.css';
 
 ReactDOM.render(
-  <Theme.Provider theme='default'>
+  <Theme.Provider theme="default">
     <React.StrictMode>
       <Application />
     </React.StrictMode>
