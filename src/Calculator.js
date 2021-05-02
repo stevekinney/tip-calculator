@@ -1,5 +1,6 @@
 import { Card, Stack } from '@twilio-paste/core';
 import { ConnectedMenuItems } from './ConnectedMenuItems';
+import { ConnectedNewItemForm } from './ConnectedNewItemForm';
 import { NewItemForm } from './NewItemForm';
 import { SummaryLine } from './SummaryLine';
 import { TipSelect } from './TipSelect';
@@ -7,7 +8,7 @@ import { TipSelect } from './TipSelect';
 const Calculator = () => {
   return (
     <Card>
-      <NewItemForm />
+      <ConnectedNewItemForm />
       <ConnectedMenuItems />
       <TipSelect />
       <Stack orientation="vertical" spacing="space30">
