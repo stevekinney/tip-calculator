@@ -27,18 +27,18 @@ export const MenuItem = ({
       </Heading>
       <Flex>
         <Box padding="space20">
-          <Label htmlFor={`$item-{uuid}-price`}>Price</Label>
+          <Label htmlFor={`$item-${uuid}-price`}>Price</Label>
           <Input
-            id={`$item-{uuid}-price`}
+            id={`$item-${uuid}-price`}
             insertBefore={<div>$</div>}
             value={price}
             onChange={updatePrice}
           />
         </Box>
         <Box padding="space20">
-          <Label htmlFor={`$item-{uuid}-quantity`}>Quantity</Label>
+          <Label htmlFor={`$item-${uuid}-quantity`}>Quantity</Label>
           <Input
-            id={`$item-{uuid}-quantity`}
+            id={`$item-${uuid}-quantity`}
             value={quantity}
             onChange={updateQuantity}
           />
