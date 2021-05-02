@@ -1,5 +1,10 @@
 import { combineReducers } from 'redux';
-import { ADD_NEW_ITEM, REMOVE_ITEM } from './actions';
+import {
+  ADD_NEW_ITEM,
+  REMOVE_ITEM,
+  UPDATE_PRICE,
+  UPDATE_QUANTITY
+} from './actions';
 
 let id = 1;
 
@@ -15,6 +20,20 @@ export const items = (state = initialItems, action) => {
 
   if (action.type === REMOVE_ITEM) {
     return state.filter((item) => item.uuid !== action.payload.uuid);
+  }
+
+  if (action.type === UPDATE_PRICE) {
+    return state.map((item) => {
+      if (item.uuid !== action.payload.uuid) return item;
+      return { ...item, price: action.payload.price };
+    });
+  }
+
+  if (action.type === UPDATE_QUANTITY) {
+    return state.map((item) => {
+      if (item.uuid !== action.payload.uuid) return item;
+      return { ...item, price: action.payload.quantity };
+    });
   }
 
   return state;

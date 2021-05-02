@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { removeItem } from './actions';
+import { removeItem, updatePrice, updateQuantity } from './actions';
 import { MenuItems } from './MenuItems';
 
 const mapStateToProps = (state) => {
@@ -11,6 +11,12 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = {
   removeItem(uuid) {
     return removeItem(uuid);
+  },
+  updateItemPrice(uuid) {
+    return updatePrice(uuid);
+  },
+  updateItemQuantity(uuid) {
+    return updateQuantity(uuid);
   }
 };
 
