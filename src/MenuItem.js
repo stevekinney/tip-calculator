@@ -15,11 +15,12 @@ export const MenuItem = ({
   name,
   price,
   quantity,
-  total,
   updatePrice = () => {},
   updateQuantity = () => {},
   remove = () => {}
 }) => {
+  const total = price * quantity;
+
   return (
     <Card marginTop="space40">
       <Heading variant="heading30" as="h3">
