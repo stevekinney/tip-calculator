@@ -5,6 +5,7 @@ import {
   UPDATE_PRICE,
   UPDATE_QUANTITY
 } from './actions';
+import { tipPercentage } from './tip-reducer';
 
 let id = 1;
 
@@ -40,4 +41,4 @@ export const items = (state = initialItems, action) => {
   return state;
 };
 
-export const reducer = combineReducers({ items });
+export const reducer = combineReducers({ items, tipPercentage });
