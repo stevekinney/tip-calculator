@@ -8,17 +8,17 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = {
+const mapDispatchToProps = (dispatch) => ({
   removeItem(uuid) {
-    return removeItem(uuid);
+    return dispatch(removeItem(uuid));
   },
   updateItemPrice(uuid) {
-    return updatePrice(uuid);
+    return (price) => dispatch(updatePrice(uuid, price));
   },
   updateItemQuantity(uuid) {
-    return updateQuantity(uuid);
+    return (quantity) => dispatch(updateQuantity(uuid, quantity));
   }
-};
+});
 
 export const ConnectedMenuItems = connect(
   mapStateToProps,

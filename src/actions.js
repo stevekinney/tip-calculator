@@ -39,7 +39,7 @@ export const updateQuantity = (uuid, quantity) => {
     type: UPDATE_QUANTITY,
     payload: {
       uuid,
-      price: quantity
+      quantity
     }
   };
 };

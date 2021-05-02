@@ -14,8 +14,8 @@ export const MenuItems = ({
           {...item}
           key={item.uuid}
           remove={() => removeItem(item.uuid)}
-          updatePrice={() => updateItemPrice(item.uuid)}
-          updateQuantity={() => updateItemQuantity(item.uuid)}
+          updatePrice={updateItemPrice(item.uuid)}
+          updateQuantity={updateItemQuantity(item.uuid)}
         />
       ))}
     </Stack>

@@ -30,6 +30,7 @@ export const items = (state = initialItems, action) => {
   }
 
   if (action.type === UPDATE_QUANTITY) {
+    console.log({ action });
     return state.map((item) => {
       if (item.uuid !== action.payload.uuid) return item;
       return { ...item, quantity: action.payload.quantity };
