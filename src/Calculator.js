@@ -2,7 +2,7 @@ import { Card, Stack } from '@twilio-paste/core';
 
 import { MenuItems } from './MenuItems';
 import { NewItemForm } from './NewItemForm';
-import { SummaryLine } from './SummaryLine';
+import { Summary } from './Summary';
 import { TipSelect } from './TipSelect';
 
 const items = [
@@ -16,12 +16,7 @@ const Calculator = () => {
       <NewItemForm />
       <MenuItems items={items} />
       <TipSelect />
-      <Stack orientation="vertical" spacing="space30">
-        <SummaryLine title="Subtotal">$0.00</SummaryLine>
-        <SummaryLine title="Tax">$0.00</SummaryLine>
-        <SummaryLine title="Tip Amount">$0.00</SummaryLine>
-        <SummaryLine title="Total">$0.00</SummaryLine>
-      </Stack>
+      <Summary />
     </Card>
   );
 };
