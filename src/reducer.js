@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { ADD_NEW_ITEM } from './actions';
+import { ADD_NEW_ITEM, REMOVE_ITEM } from './actions';
 
 let id = 1;
 
@@ -11,6 +11,10 @@ export const initialItems = [
 export const items = (state = initialItems, action) => {
   if (action.type === ADD_NEW_ITEM) {
     return [...state, action.payload];
+  }
+
+  if (action.type === REMOVE_ITEM) {
+    return state.filter((item) => item.uuid !== action.payload.uuid);
   }
 
   return state;
