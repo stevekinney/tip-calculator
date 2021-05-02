@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+import { ADD_NEW_ITEM } from './actions';
 
 let id = 1;
 
@@ -8,6 +9,10 @@ export const initialItems = [
 ];
 
 export const items = (state = initialItems, action) => {
+  if (action.type === ADD_NEW_ITEM) {
+    return [...state, action.payload];
+  }
+
   return state;
 };
 
