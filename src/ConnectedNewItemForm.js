@@ -3,13 +3,8 @@ import { bindActionCreators } from 'redux';
 import { NewItemForm } from './NewItemForm';
 import { addNewItem } from './actions';
 
-const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators(
-    {
-      onSubmit: addNewItem
-    },
-    dispatch
-  );
+const mapDispatchToProps = {
+  onSubmit: addNewItem
 };
 
 export const ConnectedNewItemForm = connect(
