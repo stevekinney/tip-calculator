@@ -1,4 +1,4 @@
-import { Card, Stack } from '@twilio-paste/core';
+import { Card } from '@twilio-paste/core';
 
 import { MenuItems } from './MenuItems';
 import { NewItemForm } from './NewItemForm';
