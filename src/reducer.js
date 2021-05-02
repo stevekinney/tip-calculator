@@ -7,6 +7,6 @@ export const initialState = {
   ]
 };
 
-export const reducer = (state, action) => {
+export const reducer = (state = initialState, action) => {
   return state;
 };
