@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Theme } from '@twilio-paste/core/theme';
 import { Provider } from 'react-redux';
 
-import Application from './Application';
+import Application from './components/Application';
 import { store } from './store';
 
 import './index.css';

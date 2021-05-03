@@ -1,9 +1,9 @@
 import { Card } from '@twilio-paste/core';
+import { TipSelectContainer } from '../containers/TipSelectContainer';
 
 import { MenuItems } from './MenuItems';
 import { NewItemForm } from './NewItemForm';
 import { Summary } from './Summary';
-import { TipSelect } from './TipSelect';
 
 const items = [
   { uuid: 1, name: 'Tofu Roast', price: 14, quantity: 1 },
@@ -15,7 +15,7 @@ const Calculator = () => {
     <Card>
       <NewItemForm />
       <MenuItems items={items} />
-      <TipSelect />
+      <TipSelectContainer />
       <Summary />
     </Card>
   );

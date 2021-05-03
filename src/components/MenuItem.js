@@ -8,7 +8,7 @@ import {
   Label
 } from '@twilio-paste/core';
 
-import { toCurrency } from './utilities';
+import { toCurrency } from '../utilities';
 
 export const MenuItem = ({
   uuid,
