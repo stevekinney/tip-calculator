@@ -32,6 +32,7 @@ export const MenuItem = ({
             id={`$item-${uuid}-price`}
             insertBefore={<div>$</div>}
             value={price}
+            type="number"
             onChange={(event) => updatePrice(event.target.value)}
           />
         </Box>
@@ -40,6 +41,7 @@ export const MenuItem = ({
           <Input
             id={`$item-${uuid}-quantity`}
             value={quantity}
+            type="number"
             onChange={(event) => updateQuantity(event.target.value)}
           />
         </Box>
