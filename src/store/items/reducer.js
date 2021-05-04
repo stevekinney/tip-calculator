@@ -33,7 +33,7 @@ export const reducer = (state = initialItems, action) => {
 
   if (action.type === ITEM_PRICE_UPDATED) {
     return produce(state, (draftState) => {
-      const item = state.find((item) => item.uuid === action.payload.uuid);
+      const item = draftState.find((item) => item.uuid === action.payload.uuid);
       item.price = parseInt(action.payload.price, 10);
     });
   }
