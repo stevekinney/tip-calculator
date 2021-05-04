@@ -1,5 +1,4 @@
 import { connect } from 'react-redux';
-import { createSelector } from 'reselect';
 import MenuItem from '../components/MenuItem';
 import {
   removeItem,
