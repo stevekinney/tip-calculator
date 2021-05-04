@@ -1,5 +1,12 @@
 import { createSelector } from 'reselect';
 
+export const selectItem = (state, props) =>
+  state.items.find((item) => item.uuid === props.uuid);
+export const selectItemTotal = createSelector(
+  [selectItem],
+  (item) => item.price * item.quantity
+);
+
 export const selectItems = (state) => state.items;
 export const selectTipPercentage = (state) => state.tipPercentage;
 
