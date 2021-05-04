@@ -39,9 +39,9 @@ export const reducer = (state = initialItems, action) => {
   }
 
   if (action.type === ITEM_QUANTITY_UPDATED) {
-    return state.map((item) => {
-      if (item.uuid !== action.payload.uuid) return item;
-      return { ...item, quantity: action.payload.quantity };
+    return produce(state, (draftState) => {
+      const item = draftState.find((item) => item.uuid === action.payload.uuid);
+      item.quantity = parseInt(action.payload.quantity, 10);
     });
   }
 
