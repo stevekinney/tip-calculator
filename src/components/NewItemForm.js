@@ -17,7 +17,7 @@ export const NewItemForm = ({ onSubmit }) => {
     if (typeof onSubmit === 'function') {
       onSubmit(name, price);
     }
-
+    // dispatch(addNewItem(name, price))
     setName('');
     setPrice(0);
   };
